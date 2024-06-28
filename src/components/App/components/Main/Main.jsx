@@ -30,7 +30,7 @@ function Main() {
                     <SearchParamsCtx.Provider value={[searchParams, setSearchParams]}>
                         <DataCtx.Provider value={[data, setData]}>
                                 <Routes>
-                                    <Route path="/" element={
+                                    <Route path="" element={ // the path is changet from "/" to ""...
                                         (<>
                                             <Filter />
                                             <CountriesContainer />
