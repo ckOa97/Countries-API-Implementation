@@ -6,7 +6,7 @@ import './css/main.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <HashRouter>
+    <HashRouter basename="/Countries-API-Implementation">
       <App />
     </HashRouter>
   </React.StrictMode>,
