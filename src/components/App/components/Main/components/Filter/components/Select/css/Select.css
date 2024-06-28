@@ -1,0 +1,101 @@
+.Select {
+  display: flex;
+  align-items: center;
+  max-width: 12.5rem;
+  width: 100%;
+  padding: 0 3rem 0 1rem;
+  border-radius: 0.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.Select:focus {
+  outline-offset: -2px;
+}
+.Select span {
+  font-size: 0.85rem;
+}
+.Select > div {
+  width: 100%;
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 3.2rem;
+  right: 0;
+  padding: 1rem 0;
+}
+.Select > div .display-none {
+  display: none;
+}
+.Select > div div {
+  height: 2rem;
+  align-items: center;
+  padding: 0 1.312rem;
+}
+.Select > div div span {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.Select .dropDownOn {
+  display: block;
+}
+.Select .dropDownOff {
+  display: none;
+}
+.Select .arrow-down-icon {
+  position: absolute;
+  right: 1rem;
+  font-size: 0.7rem;
+}
+@media screen and (max-width: 530px) {
+  .Select {
+    max-width: 50%;
+    padding: 1rem 3rem 1rem 1rem;
+  }
+}
+
+.Main.light .Select {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+}
+.Main.light .Select:focus {
+  outline: 2px solid hsl(0, 0%, 52%);
+}
+.Main.light .Select > div {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+}
+.Main.light .Select > div div:hover {
+  background-color: hsla(0, 0%, 52%, 0.61);
+  color: hsl(0, 0%, 100%);
+}
+.Main.light .Select .selected {
+  background-color: hsl(0, 0%, 52%);
+  color: hsl(0, 0%, 100%);
+}
+.Main.light .Select .arrow-down-icon {
+  color: hsl(200, 15%, 8%);
+}
+
+.Main.dark .Select {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+}
+.Main.dark .Select:focus {
+  outline: 2px solid hsl(0, 0%, 100%);
+}
+.Main.dark .Select > div {
+  background-color: hsl(209, 23%, 22%);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+}
+.Main.dark .Select > div div:hover {
+  background-color: hsla(0, 0%, 52%, 0.61);
+  color: hsl(0, 0%, 100%);
+}
+.Main.dark .Select .selected {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}
+.Main.dark .Select .arrow-down-icon {
+  color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=Select.css.map */

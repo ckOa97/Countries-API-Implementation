@@ -1,0 +1,62 @@
+.Search {
+  max-width: 25rem;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.Search input {
+  border-radius: 0.5rem;
+  padding: 1rem 1rem 1rem 4rem;
+  width: 100%;
+  border-style: none;
+}
+.Search input:focus {
+  outline-offset: -2px;
+}
+.Search .searchIcon {
+  color: hsl(0, 0%, 52%);
+  font-size: 1.1rem;
+  position: absolute;
+  left: 1.65rem;
+  pointer-events: none;
+}
+@media screen and (max-width: 590px) {
+  .Search {
+    max-width: 20rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  .Search {
+    max-width: 100%;
+  }
+}
+
+.Main.light .Search input {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+}
+.Main.light .Search input:focus {
+  outline: 2px solid hsl(0, 0%, 52%);
+}
+.Main.light .Search .searchIcon {
+  color: hsl(0, 0%, 52%);
+}
+
+.Main.dark .Search input {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+}
+.Main.dark .Search input:focus {
+  outline: 2px solid hsl(0, 0%, 100%);
+}
+.Main.dark .Search input::-moz-placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.Main.dark .Search input::placeholder {
+  color: hsl(0, 0%, 100%);
+}
+.Main.dark .Search .searchIcon {
+  color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=Search.css.map */

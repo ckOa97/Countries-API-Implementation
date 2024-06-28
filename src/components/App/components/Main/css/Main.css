@@ -1,0 +1,68 @@
+.Main {
+  padding: 3rem 17.125rem;
+  flex: 1;
+}
+@media screen and (max-width: 1700px) {
+  .Main {
+    padding: 3rem 10.125rem;
+  }
+}
+@media screen and (max-width: 1470px) {
+  .Main {
+    padding: 3rem 4.125rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .Main {
+    padding: 3rem 8.125rem;
+  }
+}
+@media screen and (max-width: 744px) {
+  .Main {
+    padding: 3rem 5.125rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .Main {
+    padding: 3rem 4.125rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .Main {
+    padding: 3rem 3rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .Main {
+    padding: 3rem 1rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .Main.home {
+    padding: 3rem 8rem;
+  }
+}
+@media screen and (max-width: 495px) {
+  .Main.home {
+    padding: 3rem 6rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .Main.home {
+    padding: 3rem 4rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .Main.home {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.Main.light {
+  background-color: hsl(0, 0%, 98%);
+}
+
+.Main.dark {
+  background-color: hsl(207, 26%, 17%);
+}/*# sourceMappingURL=Main.css.map */

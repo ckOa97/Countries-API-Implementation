@@ -1,0 +1,95 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 17.125rem;
+  position: relative;
+}
+.Header h1 {
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.Header button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  opacity: 0.8;
+  font-size: 1rem;
+  background-color: transparent;
+  border-style: none;
+  cursor: pointer;
+}
+.Header button .faMoon {
+  font-size: 1.2rem;
+}
+@media screen and (max-width: 1700px) {
+  .Header {
+    padding: 1.2rem 10.125rem;
+  }
+}
+@media screen and (max-width: 1470px) {
+  .Header {
+    padding: 1.2rem 4.125rem;
+  }
+}
+@media screen and (max-width: 860px) {
+  .Header {
+    padding: 1.2rem 8.125rem;
+  }
+}
+@media screen and (max-width: 744px) {
+  .Header {
+    padding: 1.2rem 5.125rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .Header {
+    padding: 1.2rem 4.125rem;
+  }
+}
+@media screen and (max-width: 620px) {
+  .Header {
+    padding: 1.2rem 3rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .Header {
+    padding: 1.2rem 1rem;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .Header.home {
+    padding: 1.2rem 8rem;
+  }
+}
+@media screen and (max-width: 495px) {
+  .Header.home {
+    padding: 1.2rem 6rem;
+  }
+}
+@media screen and (max-width: 440px) {
+  .Header.home {
+    padding: 1.2rem 4rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .Header.home {
+    padding: 1.2rem 2.5rem;
+  }
+}
+
+.Header.light {
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.226);
+}
+
+.Header.dark {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.301);
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.Header.dark button {
+  color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=Header.css.map */

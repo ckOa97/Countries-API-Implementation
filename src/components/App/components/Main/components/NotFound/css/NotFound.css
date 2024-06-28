@@ -1,0 +1,19 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.NotFound span {
+  font-size: 5rem;
+}
+.NotFound h1 {
+  font-size: 3rem;
+}
+
+.Main.light {
+  color: hsl(200, 15%, 8%);
+}
+
+.Main.dark {
+  color: hsl(0, 0%, 100%);
+}/*# sourceMappingURL=NotFound.css.map */

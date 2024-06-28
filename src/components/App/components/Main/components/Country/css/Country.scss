@@ -1,0 +1,166 @@
+@use '../../../../../../../colors/colors';
+
+.Country {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    div:first-of-type {
+        button {
+            appearance: none;
+            display: flex;
+            gap: .75rem;
+            padding: .6rem 2rem;
+            border-radius: 0.2rem;
+            border-style: none;
+            cursor: pointer;
+            transition: transform .1s;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    > div:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        > div:first-of-type {
+            width: 40%;
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+            @media screen and (max-width: 865px) {
+                width: 100%;
+            }
+        }
+        > div:last-of-type {
+            max-width: 55%;
+            // border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2.8rem;
+            // width: 100%;
+            h2 {
+                font-size: 2.125rem;
+                font-weight: 800;
+                max-width: 40rem;
+            }
+            div {
+                display: flex;
+                justify-content: space-between;
+                gap: 10rem;
+                ul {
+                    // border: 1px solid black;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    gap: .5rem;
+                    li {
+                        display: flex;
+                        width: 100%;
+                        gap: .4rem;
+                        span:first-of-type {
+                            white-space: nowrap;
+                            font-weight: 700;
+                        }
+                        span:last-of-type {
+                            max-width: 10rem;
+                        }
+                    }
+                }
+                @media screen and (max-width: 1100px) {
+                    gap: 5rem;
+                }
+                @media screen and (max-width: 950px) {
+                    gap: 1.5rem;
+                }
+                @media screen and (max-width: 470px) {
+                    flex-direction: column;
+                }
+            }
+            > span {
+                display: flex;
+                gap: 1rem;
+                > span:first-of-type {
+                    padding-top: .262rem;
+                    font-weight: 700;
+                    min-width: 8.2rem;
+                }
+                > span:last-of-type {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: .5rem;
+                    max-width: 30rem;
+                    span {
+                        padding: .262rem 1.1rem;
+                        border-radius: 0.2rem;
+                    }
+                }
+            }
+            @media screen and (max-width: 865px) {
+                max-width: 100%;
+            }
+        }
+        @media screen and (max-width: 865px) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+}
+
+.Main.light .Country {
+    div:first-of-type {
+        button {
+            box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+            background-color: colors.$whiteDarkModeTextAndLightModeElements;
+            color: colors.$veryDarkBlueLightModeText;
+        }
+    }
+    > div:last-of-type {
+        > div:last-of-type {
+            > span {
+                > span:last-of-type {
+                    span {
+                        box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+                        background-color: colors.$whiteDarkModeTextAndLightModeElements;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.Main.dark .Country {
+    color: colors.$whiteDarkModeTextAndLightModeElements;
+    div:first-of-type {
+        button {
+            box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+            background-color: colors.$darkBlueDarkModeElements;
+            color: colors.$whiteDarkModeTextAndLightModeElements;
+        }
+    }
+    > div:last-of-type {
+        > div:last-of-type {
+            div {
+                ul {
+                    li {
+                        span:first-of-type {
+                        }
+                        span:last-of-type {
+                            font-weight: 300;
+                            opacity: .8;
+                        }
+                    }
+                }
+            }
+            > span {
+                > span:last-of-type {
+                    span {
+                        box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+                        background-color: colors.$darkBlueDarkModeElements;
+                    }
+                }
+            }
+        }
+    }
+}

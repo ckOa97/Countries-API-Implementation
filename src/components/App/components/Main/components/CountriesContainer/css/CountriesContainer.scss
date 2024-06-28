@@ -1,0 +1,19 @@
+.CountriesContainer {
+    z-index: 0;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 16.5rem);
+    flex-wrap: wrap;
+    row-gap: 4rem;
+    justify-content: space-between;
+    @media screen and (max-width: 1220px) {
+        grid-template-columns: repeat(3, 16.5rem);
+    }
+    @media screen and (max-width: 860px) {
+        grid-template-columns: repeat(2, 16.5rem);
+    }
+    @media screen and (max-width: 530px) {
+        grid-template-columns: repeat(1, 16.5rem);
+        justify-content: center;
+    }
+}

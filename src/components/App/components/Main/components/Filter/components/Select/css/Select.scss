@@ -1,0 +1,109 @@
+@use '../../../../../../../../../colors/colors';
+
+.Select {
+    display: flex;
+    align-items: center;
+    max-width: 12.5rem;
+    width: 100%;
+    padding: 0 3rem 0 1rem;
+    border-radius: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    &:focus {
+        outline-offset: -2px;
+    }
+    span {
+        font-size: .85rem;
+    }
+    > div {
+        width: 100%;
+        border-radius: 0.5rem;
+        position: absolute;
+        top: 3.2rem;
+        right: 0;
+        padding: 1rem 0;
+        .display-none {
+            display: none;
+        }
+        div {
+            height: 2rem;
+            //display: flex;
+            align-items: center;
+            padding: 0 1.312rem;
+            span {
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+        }
+    }
+    .dropDownOn {
+        display: block;
+    }
+    .dropDownOff {
+        display: none;
+    }
+    .arrow-down-icon {
+        position: absolute;
+        right: 1rem;
+        font-size: .7rem;
+    }
+    @media screen and (max-width: 530px) {
+        max-width: 50%;
+        padding: 1rem 3rem 1rem 1rem;
+    }
+}
+
+.Main.light .Select {
+    background-color: colors.$whiteDarkModeTextAndLightModeElements;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+    &:focus {
+        outline: 2px solid colors.$darkGrayLightModeInput;
+    }
+    > div {
+        background-color: colors.$whiteDarkModeTextAndLightModeElements;
+        box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+        div {
+            &:hover {
+                background-color: colors.$darkGrayLightModeInput2;
+                color: colors.$whiteDarkModeTextAndLightModeElements;
+            }
+        }
+    }
+    .selected {
+        background-color: colors.$darkGrayLightModeInput;
+        color: colors.$whiteDarkModeTextAndLightModeElements;
+    }
+    .arrow-down-icon {
+        color: colors.$veryDarkBlueLightModeText;
+    }
+}
+
+.Main.dark .Select {
+    background-color: colors.$darkBlueDarkModeElements;
+    color: colors.$whiteDarkModeTextAndLightModeElements;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+    // > span:first-of-type {
+    // }
+    &:focus {
+        outline: 2px solid colors.$whiteDarkModeTextAndLightModeElements;
+    }
+    > div {
+        background-color: colors.$darkBlueDarkModeElements;
+        box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+        // color: ;
+        div {
+            &:hover {
+                background-color: colors.$darkGrayLightModeInput2; //change
+                color: colors.$whiteDarkModeTextAndLightModeElements; //change
+            }
+        }
+    }
+    .selected {
+        background-color: colors.$whiteDarkModeTextAndLightModeElements;
+        color: colors.$veryDarkBlueLightModeText;
+    }
+    .arrow-down-icon {
+        color: colors.$whiteDarkModeTextAndLightModeElements;
+    }
+}

@@ -1,0 +1,11 @@
+.Filter {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    @media screen and (max-width: 530px) {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

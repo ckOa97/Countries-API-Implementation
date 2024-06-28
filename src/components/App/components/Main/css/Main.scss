@@ -1,0 +1,50 @@
+@use '../../../../../colors/colors';
+
+.Main {
+    padding: 3rem 17.125rem;
+    flex: 1;
+    @media screen and (max-width: 1700px) {
+        padding: 3rem 10.125rem;
+    }
+    @media screen and (max-width: 1470px) {
+        padding: 3rem 4.125rem;
+    }
+    @media screen and (max-width: 860px) {
+        padding: 3rem 8.125rem;
+    }
+    @media screen and (max-width: 744px) {
+        padding: 3rem 5.125rem;
+    }
+    @media screen and (max-width: 650px) {
+        padding: 3rem 4.125rem;
+    }
+    @media screen and (max-width: 620px) {
+        padding: 3rem 3rem;
+    }
+    @media screen and (max-width: 340px) {
+        padding: 3rem 1rem;
+    }
+}
+
+.Main.home {
+    @media screen and (max-width: 530px) {
+        padding: 3rem 8rem;
+    }
+    @media screen and (max-width: 495px) {
+        padding: 3rem 6rem;
+    }
+    @media screen and (max-width: 440px) {
+        padding: 3rem 4rem;
+    }
+    @media screen and (max-width: 390px) {
+        padding: 3rem 2.5rem;
+    }
+}
+
+.Main.light {
+    background-color: colors.$veryLightGrayLightModeBackground;
+}
+
+.Main.dark {
+    background-color: colors.$veryDarkBlueDarkModeBackground;
+}

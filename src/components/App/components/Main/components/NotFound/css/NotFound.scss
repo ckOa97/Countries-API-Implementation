@@ -1,0 +1,21 @@
+@use '../../../../../../../colors/colors';
+
+.NotFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        font-size: 5rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.Main.light {
+    color: colors.$veryDarkBlueLightModeText;
+}
+
+.Main.dark {
+    color: colors.$whiteDarkModeTextAndLightModeElements;
+}

@@ -1,0 +1,143 @@
+.Country {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.Country div:first-of-type button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.6rem 2rem;
+  border-radius: 0.2rem;
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.Country div:first-of-type button:hover {
+  transform: scale(1.1);
+}
+.Country > div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+.Country > div:last-of-type > div:first-of-type {
+  width: 40%;
+}
+.Country > div:last-of-type > div:first-of-type img {
+  max-width: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 865px) {
+  .Country > div:last-of-type > div:first-of-type {
+    width: 100%;
+  }
+}
+.Country > div:last-of-type > div:last-of-type {
+  max-width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.8rem;
+}
+.Country > div:last-of-type > div:last-of-type h2 {
+  font-size: 2.125rem;
+  font-weight: 800;
+  max-width: 40rem;
+}
+.Country > div:last-of-type > div:last-of-type div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+.Country > div:last-of-type > div:last-of-type div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.Country > div:last-of-type > div:last-of-type div ul li {
+  display: flex;
+  width: 100%;
+  gap: 0.4rem;
+}
+.Country > div:last-of-type > div:last-of-type div ul li span:first-of-type {
+  white-space: nowrap;
+  font-weight: 700;
+}
+.Country > div:last-of-type > div:last-of-type div ul li span:last-of-type {
+  max-width: 10rem;
+}
+@media screen and (max-width: 1100px) {
+  .Country > div:last-of-type > div:last-of-type div {
+    gap: 5rem;
+  }
+}
+@media screen and (max-width: 950px) {
+  .Country > div:last-of-type > div:last-of-type div {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 470px) {
+  .Country > div:last-of-type > div:last-of-type div {
+    flex-direction: column;
+  }
+}
+.Country > div:last-of-type > div:last-of-type > span {
+  display: flex;
+  gap: 1rem;
+}
+.Country > div:last-of-type > div:last-of-type > span > span:first-of-type {
+  padding-top: 0.262rem;
+  font-weight: 700;
+  min-width: 8.2rem;
+}
+.Country > div:last-of-type > div:last-of-type > span > span:last-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 30rem;
+}
+.Country > div:last-of-type > div:last-of-type > span > span:last-of-type span {
+  padding: 0.262rem 1.1rem;
+  border-radius: 0.2rem;
+}
+@media screen and (max-width: 865px) {
+  .Country > div:last-of-type > div:last-of-type {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 865px) {
+  .Country > div:last-of-type {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.Main.light .Country div:first-of-type button {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}
+.Main.light .Country > div:last-of-type > div:last-of-type > span > span:last-of-type span {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+  background-color: hsl(0, 0%, 100%);
+}
+
+.Main.dark .Country {
+  color: hsl(0, 0%, 100%);
+}
+.Main.dark .Country div:first-of-type button {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.Main.dark .Country > div:last-of-type > div:last-of-type div ul li span:last-of-type {
+  font-weight: 300;
+  opacity: 0.8;
+}
+.Main.dark .Country > div:last-of-type > div:last-of-type > span > span:last-of-type span {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+  background-color: hsl(209, 23%, 22%);
+}/*# sourceMappingURL=Country.css.map */

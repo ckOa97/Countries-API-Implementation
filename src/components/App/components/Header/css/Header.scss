@@ -1,0 +1,77 @@
+@use '../../../../../colors/colors';
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 17.125rem;
+    position: relative;
+    h1{
+        font-size: 1.4rem;
+        font-weight: 800;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        font-weight: 600;
+        opacity: .8;
+        font-size: 1rem;
+        background-color: transparent;
+        border-style: none;
+        cursor: pointer;
+        .faMoon {
+            font-size: 1.2rem;
+        }
+    }
+    @media screen and (max-width: 1700px) {
+        padding: 1.2rem 10.125rem;
+    }
+    @media screen and (max-width: 1470px) {
+        padding: 1.2rem 4.125rem;
+    }
+    @media screen and (max-width: 860px) {
+        padding: 1.2rem 8.125rem;
+    }
+    @media screen and (max-width: 744px) {
+        padding: 1.2rem 5.125rem;
+    }
+    @media screen and (max-width: 650px) {
+        padding: 1.2rem 4.125rem;
+    }
+    @media screen and (max-width: 620px) {
+        padding: 1.2rem 3rem;
+    }
+    @media screen and (max-width: 340px) {
+        padding: 1.2rem 1rem;
+    }
+}
+
+.Header.home {
+    @media screen and (max-width: 530px) {
+        padding: 1.2rem 8rem;
+    }
+    @media screen and (max-width: 495px) {
+        padding: 1.2rem 6rem;
+    }
+    @media screen and (max-width: 440px) {
+        padding: 1.2rem 4rem;
+    }
+    @media screen and (max-width: 390px) {
+        padding: 1.2rem 2.5rem;
+    }
+}
+
+.Header.light {
+    background-color: colors.$whiteDarkModeTextAndLightModeElements;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.226);
+}
+
+.Header.dark {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.301);
+    background-color: colors.$darkBlueDarkModeElements;
+    color: colors.$whiteDarkModeTextAndLightModeElements;
+    button {
+        color: colors.$whiteDarkModeTextAndLightModeElements;
+    }
+}
