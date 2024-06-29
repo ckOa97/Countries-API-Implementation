@@ -7,7 +7,7 @@ import Country from "./components/Country/Country.jsx";
 import NotFound from "./components/NotFound/NotFound.jsx";
 import './css/Main.css';
 
-const URL = '/data.json';
+const URL = '/Countries-API-Implementation/data.json';
 const SearchParamsCtx = createContext();
 const DataCtx = createContext();
 
@@ -25,8 +25,6 @@ function Main() {
         })();
     }, []);
 
-    //${(location.pathname === '/Countries-API-Implementation/country') ? 'country' : 'home'}
-
     return (
                 <main className={`Main ${theme}`}>
                     <SearchParamsCtx.Provider value={[searchParams, setSearchParams]}>
@@ -40,8 +38,9 @@ function Main() {
                                     } />
                                     <Route path="/countries">
                                         <Route path=":countryName" element={<Country data={data} />} />
+                                        <Route path="" element={<NotFound />} />
                                     </Route>
-                                    <Route path="*" element={<NotFound />} />
+                                    <Route path="/*" element={<NotFound />} />
                                 </Routes>
                         </DataCtx.Provider>
                     </SearchParamsCtx.Provider>

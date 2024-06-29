@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { SearchParamsCtx, DataCtx } from '../../Main.jsx';
 import CountryCard from './components/CountryCard.jsx';
 import './css/CountriesContainer.css';

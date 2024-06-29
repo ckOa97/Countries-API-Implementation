@@ -11,9 +11,8 @@ function Country({data}) {
 
     function findCountry() {
         try {
-            if(data) return data.find(country => country.name === decodeURIComponent(countryName));
+            if(data) return data.find(country => country.name.toLowerCase() === decodeURIComponent(countryName).toLowerCase());
         } catch(e) {
-            console.log('hello');
             return null;
         }
         return null;
