@@ -25,8 +25,10 @@ function Main() {
         })();
     }, []);
 
+    //${(location.pathname === '/Countries-API-Implementation/country') ? 'country' : 'home'}
+
     return (
-                <main className={`Main ${theme} ${(location.pathname === '/Countries-API-Implementation/country') ? 'country' : 'home'}`}>
+                <main className={`Main ${theme}`}>
                     <SearchParamsCtx.Provider value={[searchParams, setSearchParams]}>
                         <DataCtx.Provider value={[data, setData]}>
                                 <Routes>
