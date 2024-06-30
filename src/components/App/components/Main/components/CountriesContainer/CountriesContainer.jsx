@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { SearchParamsCtx, DataCtx } from '../../Main.jsx';
 import CountryCard from './components/CountryCard.jsx';
 import './css/CountriesContainer.css';
@@ -6,6 +6,8 @@ import './css/CountriesContainer.css';
 function CountriesContainer() {
     const [searchParams, setSearchParams] = useContext(SearchParamsCtx);
     const [data, setData] = useContext(DataCtx);
+    const [page, setPage] = useState(1);
+    const [showLoadMoreButton, setShowLoadMoreButton] = useState(true);
     
     function removeDiacritics(str) {
         return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -24,12 +26,30 @@ function CountriesContainer() {
                                                             .includes(removeDiacritics(search)
                                                             .trim()
                                                             .toLowerCase()));
-        return filteredData;
+                                                            
+        if(filteredData.length <= page * 16) {
+            if(showLoadMoreButton) setShowLoadMoreButton(false);
+        } else {
+            if(!showLoadMoreButton) setShowLoadMoreButton(true);
+        }
+
+        return filteredData.slice(0, page * 16);
     }
+
+    function loadMore() {
+        setPage(page => page + 1);
+    }
+
+    useEffect(() => {
+        setPage(1);
+    }, [searchParams]);
 
     if(data) return (
                         <div className='CountriesContainer'>
-                            {filterData().map((country, i) => <CountryCard data={country} key={i} />)}
+                            <div>
+                                {filterData().map(country => <CountryCard data={country} key={country.name} />)}
+                            </div>
+                            {showLoadMoreButton && <button onClick={loadMore}>See more</button>}
                         </div>
                     );
 }

@@ -1,4 +1,9 @@
 .CountriesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.CountriesContainer > div:first-of-type {
   z-index: 0;
   position: relative;
   display: grid;
@@ -8,18 +13,46 @@
   justify-content: space-between;
 }
 @media screen and (max-width: 1220px) {
-  .CountriesContainer {
+  .CountriesContainer > div:first-of-type {
     grid-template-columns: repeat(3, 16.5rem);
   }
 }
 @media screen and (max-width: 860px) {
-  .CountriesContainer {
+  .CountriesContainer > div:first-of-type {
     grid-template-columns: repeat(2, 16.5rem);
   }
 }
 @media screen and (max-width: 530px) {
-  .CountriesContainer {
+  .CountriesContainer > div:first-of-type {
     grid-template-columns: repeat(1, 16.5rem);
     justify-content: center;
   }
+}
+.CountriesContainer > button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: flex;
+  align-self: center;
+  gap: 0.75rem;
+  padding: 0.6rem 2rem;
+  border-radius: 0.2rem;
+  border-style: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.CountriesContainer > button:hover {
+  transform: scale(1.1);
+}
+
+.Main.light .CountriesContainer > button {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.123);
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+}
+
+.Main.dark .CountriesContainer > button {
+  box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.301);
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
 }/*# sourceMappingURL=CountriesContainer.css.map */

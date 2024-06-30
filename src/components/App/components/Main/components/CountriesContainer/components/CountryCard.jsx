@@ -5,7 +5,7 @@ function CountryCard({data}) {
     return (
                 <Link to={`/countries/${data.name}`} className='CountryCard'>
                     <div>
-                        <img src={data.flag} alt={`${data.name} flag`} />
+                        <img loading='lazy' src={data.flag} alt={`${data.name} flag`} />
                         <div className='description'>
                             <h2>{data.name}</h2>
                             <ul>
