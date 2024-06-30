@@ -49,7 +49,7 @@ function CountriesContainer() {
                             <div>
                                 {filterData().map(country => <CountryCard data={country} key={country.name} />)}
                             </div>
-                            {showLoadMoreButton && <button onClick={loadMore}>See more</button>}
+                            {showLoadMoreButton && <button onClick={loadMore}>See More</button>}
                         </div>
                     );
 }

@@ -3,7 +3,7 @@ import './css/CountryCard.css';
 
 function CountryCard({data}) {
     return (
-                <Link to={`/countries/${data.name}`} className='CountryCard'>
+                <Link to={`/countries/${encodeURIComponent(data.name)}`} className='CountryCard'>
                     <div>
                         <img loading='lazy' src={data.flag} alt={`${data.name} flag`} />
                         <div className='description'>

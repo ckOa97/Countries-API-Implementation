@@ -26,21 +26,6 @@
     }
 }
 
-.Main.home {
-    @media screen and (max-width: 530px) {
-        padding: 3rem 8rem;
-    }
-    @media screen and (max-width: 495px) {
-        padding: 3rem 6rem;
-    }
-    @media screen and (max-width: 440px) {
-        padding: 3rem 4rem;
-    }
-    @media screen and (max-width: 390px) {
-        padding: 3rem 2.5rem;
-    }
-}
-
 .Main.light {
     background-color: colors.$veryLightGrayLightModeBackground;
 }

@@ -38,27 +38,6 @@
   }
 }
 
-@media screen and (max-width: 530px) {
-  .Main.home {
-    padding: 3rem 8rem;
-  }
-}
-@media screen and (max-width: 495px) {
-  .Main.home {
-    padding: 3rem 6rem;
-  }
-}
-@media screen and (max-width: 440px) {
-  .Main.home {
-    padding: 3rem 4rem;
-  }
-}
-@media screen and (max-width: 390px) {
-  .Main.home {
-    padding: 3rem 2.5rem;
-  }
-}
-
 .Main.light {
   background-color: hsl(0, 0%, 98%);
 }
